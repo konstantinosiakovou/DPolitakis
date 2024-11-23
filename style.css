@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Opens Sans', sans-serif;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.banner.night{
+    background: #333;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 150px;
+    height: 150px;
+    background:url(dotted.png);
+    background-size: cover;
+    animation: animateColor 10s linear infinite;
+    transition-delay: -5s ;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.banner.night{
+    background: #333;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 150px;
+    height: 150px;
+    background:url(dotted.png);
+    background-size: cover;
+    animation: animateColor 10s linear infinite;
+    transition-delay: -5s ;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    color: #e2590a;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header .logo span{
+    color: #2196f3;    
+}
+
+header ul{
+    display: flex;
+    gap: 40px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+      padding: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    header ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+.content{
+    position: relative;
+    max-width: 700px;
+    z-index: 10;    
+}
+
+.content h3{
+    font-size: 2em;
+    color: #333;
+    font-weight: 200;
+    transition: 0.5s;
+}
+
+.content h2{
+    font-size: 5.5em;
+    color: #e2590a;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.content h2 span{
+    color: orangered;    
+}
+
+.content p{
+    font-size: 1.2em;
+    color: #050505;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.content button{
+    position: relative;
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.content button.chat{
+   background: transparent;
+   color: #333;
+}
+
+.content button.chat ion-icon{
+    position: relative;
+    top: 5px;
+    color: #e91e63;
+    font-size: 1.5em;
+ }
+
+ /* Styles for screens with max-width of 700px */
+@media screen and (max-width: 700px) {
+    .content {
+      max-width: 100%;
+    }
+    
+    .content h2 {
+      font-size: 3.5em;
+    }
+    
+    .content button {
+      margin-right: 10px;
+    }
+  }
+  
+  /* Styles for screens with max-width of 500px */
+  @media screen and (max-width: 500px) {
+    .content h2 {
+      font-size: 2.5em;
+    }
+    
+    .content button {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+ .container{
+    position: relative;
+    margin-left: 40rem;
+    max-width: 800px;    
+ }
+ .container h2{
+    font-size: 5.5em;
+    color: #e2590a;
+    font-weight: 700;
+    -webkit-transition: 0.5s; /* add vendor prefixes for maximum browser support */
+    transition: 0.5s;
+}
+
+.container p{
+    font-size: 1.2em;
+    color: #777;
+    margin: 10px 0;
+    -webkit-transition: 0.5s; /* add vendor prefixes for maximum browser support */
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) 
+{ 
+.container { 
+    margin-left: 2rem; 
+}
+
+.container h2 { 
+    font-size: 4em; 
+}
+
+.container p {
+     font-size: 1em; 
+    } 
+}
+
+ .sci{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 20px;
+ }
+
+ .sci li{
+    list-style: none;
+ }
+
+ .sci li a{
+    text-decoration: none;
+    font-size: 1.75em;
+    color: #333;
+ }
+
+ .sci li a:hover{
+    color: #2196f3;
+ }
+
+ /* for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .sci {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .sci li {
+        margin-bottom: 15px;
+    }
+    .sci li a {
+        font-size: 1.25em;
+    }
+}
+
+/* for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+    .sci li {
+        margin-bottom: 10px;
+    }
+    .sci li a {
+        font-size: 1em;
+    }
+    .sci li a:hover {
+        color: #2196f3;
+    }
+}
+
+ .DayNight{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+ }
+
+ .banner.night .DayNight{
+    background: #444;
+    color: #fff;
+ }
+.DayNight ion-icon:nth-child(2), 
+.banner.night .dayNight ion-icon:nth-child(1)
+ {
+    display: none;
+ }
+ .banner.night .DayNight ion-icon:nth-child(2){
+    display: block;
+ }
+ 
+ .banner.night header .logo,
+ .banner.night .content h2,
+ .banner.night .content p,
+ .banner.night .content button.chat,
+ .banner.night .sci li a,
+ .banner.night header ul li a
+ {
+    color: #fff;
+ }
+
+ .banner.night .sci li a:hover{
+    color: #2196f3;
+ }
+
+ .colors{
+    position: absolute;
+    right: 0;
+    max-width: 800px;
+    animation: animateColor 8s ease-in-out infinite;
+ }
+
+ @media (max-width: 768px) {
+    /* Adjust DayNight size and position for smaller screens */
+    .DayNight {
+      width: 40px;
+      height: 40px;
+      bottom: 15px;
+    }
+  
+    /* Adjust font-size for smaller screens */
+    .DayNight {
+      font-size: 1.5em;
+    }
+  
+    /* Adjust max-width for smaller screens */
+    .colors {
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Adjust DayNight size and position for even smaller screens */
+    .DayNight {
+      width: 30px;
+      height: 30px;
+      bottom: 10px;
+    }
+  
+    /* Adjust font-size for even smaller screens */
+    .DayNight {
+      font-size: 1.2em;
+    }
+  
+    /* Adjust max-width for even smaller screens */
+    .colors {
+      max-width: 400px;
+    }
+  }
+
+@keyframes animateColor {
+    0%, 100%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(50px);
+    }
+}
+
+ .men{
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    max-height: 85vh;
+    animation: animateMen 8s ease-in-out infinite;
+ }
+
+ @media only screen and (max-width: 768px) {
+    .men {
+      right: 50px; /* Adjust position for smaller screens */
+      max-height: 75vh; /* Reduce max-height for smaller screens */
+    }
+  }
+
+ @keyframes animateMen 
+ {
+    0%,100%
+    {
+        transform: translateX(0px);
+    }
+    50%
+    {
+        transform: translateX(-50px);
+    }
+ }
+ 
+
+ footer {
+  background-color: #222222;
+  color: #e2590a;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    margin-bottom: 20px;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+/*--- NavBar --*/
+.navbar{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, .6)!important;
+}
+.navbar-brand img{
+  height: 1rem; 
+  width: 10rem;  
+}
+.navbar-nav li{
+  padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link{
+  color: red;
+  padding-top: 0.1rem;
+}
+.navbar-dark .navbar-nav .navbar-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+  color:#1ebba3;
+}
+
+.narrow {
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 2rem;
+}
+.narrow h1 {
+    font-size: 2.4rem;
+}
+.btn-secondary {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  border-color: #1EBBA3;
+  background-color: #1EBBA3;
+  color: white;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  border-color: #189582;
+  background-color: #189582;
+  color: white;
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ 
